@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  transition: all 0.25s ease-in-out;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  background: #0f172a;
+  color: #f8fafc;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Branding */
+.navbar {
+  background: #1e293b;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #334155;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+/* Fleet Showcase Animations */
+.fleet-showcase {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  text-align: center;
+  gap: 15px;
+}
+
+.fleet-item {
+  background: #1e293b;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  flex: 1;
+  animation: float 4s ease-in-out infinite;
+}
+
+.fleet-item:nth-child(2) {
+  animation-delay: 1.3s;
+}
+
+.fleet-item:nth-child(3) {
+  animation-delay: 2.6s;
+}
+
+.fleet-item:hover {
+  transform: translateY(-8px) scale(1.03);
+  border-color: #38bdf8;
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
+}
+
+.fleet-item img {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 8px;
+  background: #0f172a; /* Matches your dark card/body background */
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+}
+
+.fleet-item p {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Card Entry Animation */
+.card {
+  background: #1e293b;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  margin-bottom: 25px;
+  border: 1px solid #334155;
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Form Controls */
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 18px 0;
+  background: #0f172a;
+  border: 1px solid #475569;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+label {
+  font-size: 14px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* Price Box Accent */
+.price-box {
+  font-size: 20px;
+  font-weight: 700;
+  color: #38bdf8;
+  margin: 18px 0;
+  padding: 12px;
+  background: rgba(56, 189, 248, 0.08);
+  border-left: 4px solid #38bdf8;
+  border-radius: 4px;
+}
+
+/* Buttons */
+.btn-submit {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-submit:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.45);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: #475569;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.btn-secondary:hover {
+  background: #64748b;
+}
+
+/* Table Design */
+.table-responsive {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #334155;
+  font-size: 14px;
+}
+
+th {
+  color: #94a3b8;
+  background: #0f172a;
+}
+
+/* Status Badges */
+.status-pending {
+  color: #f59e0b;
+  font-weight: 700;
+  animation: pulse 2s infinite;
+}
+
+.status-dispatched {
+  color: #10b981;
+  font-weight: 700;
+}
+
+/* Keyframe Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Hero & Contact Banner Styling */
+.hero-section h1 {
+  font-size: 24px;
+  color: #38bdf8;
+  margin-top: 0;
+}
+
+.hero-section p {
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.contact-banner {
+  margin-top: 20px;
+  padding: 15px;
+  background: #0f172a;
+  border-radius: 10px;
+  border: 1px solid #334155;
+}
+
+.contact-banner p {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-whatsapp {
+  flex: 1;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn-whatsapp:hover {
+  background: #1da851;
+}
+
+.btn-call {
+  flex: 1;
+  background: #0284c7;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn-call:hover {
+  background: #0369a1;
+}
+
+/* Mobile Optimization Tweaks */
+@media (max-width: 600px) {
+  .fleet-showcase {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .fleet-item {
+    padding: 10px 5px;
+  }
+
+  .fleet-item img {
+    height: 40px;
+    background: transparent; /* Blends images naturally into the dark cards */
+  }
+
+  .fleet-item p {
+    font-size: 11px;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+  }
+}

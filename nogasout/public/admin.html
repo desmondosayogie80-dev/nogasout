@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nogasout - Manager Admin Panel</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/logo2.png">
+</head>
+<body>
+
+  <!-- Header with clean logo alignment -->
+  <header class="header" style="display: flex; align-items: center; justify-content: center; gap: 12px; padding: 15px;">
+    <img src="/assets/logo2.png" alt="Nogasout Logo" style="height: 40px; width: auto; object-fit: contain;">
+    <h1 class="logo-text" style="font-size: 22px; margin: 0; color: #fff;">Nogasout Admin</h1>
+  </header>
+
+  <main class="container">
+    
+    <!-- 1. LOGIN CARD (Shown first) -->
+    <div id="loginCard" class="card">
+      <h2>Manager Access</h2>
+      <p style="color: #94a3b8; font-size: 14px; margin-bottom: 15px;">Enter your secret PIN to access manager controls.</p>
+      <input type="password" id="adminPin" placeholder="Enter PIN (1234)" style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #fff;">
+      <button onclick="adminLogin()" class="btn-submit">Login</button>
+    </div>
+
+    <!-- 2. PROTECTED DASHBOARD (Hidden until logged in) -->
+    <div id="dashboardCard" class="card" style="display:none;">
+      
+      <!-- Hidden Price Management Section -->
+      <div class="card" style="margin-bottom: 25px; background: rgba(255,255,255,0.03); border: 1px solid #334155; padding: 15px; border-radius: 8px;">
+        <h3>⚙️ Manage Platform Rates</h3>
+        <form id="priceForm" style="display: flex; flex-direction: column; gap: 12px; margin-top: 15px;">
+          <div>
+            <label style="display: block; font-size: 14px; margin-bottom: 5px;">Gas Price per kg (₦):</label>
+            <input type="number" id="adminGasRate" required placeholder="e.g. 1400" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #334155; background: #0f172a; color: #fff;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 14px; margin-bottom: 5px;">Pooled Delivery Fee (₦):</label>
+            <input type="number" id="adminPooledFee" required placeholder="e.g. 800" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #334155; background: #0f172a; color: #fff;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 14px; margin-bottom: 5px;">Express Delivery Fee (₦):</label>
+            <input type="number" id="adminExpressFee" required placeholder="e.g. 1500" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #334155; background: #0f172a; color: #fff;">
+          </div>
+          <button type="submit" class="btn-submit" style="background: #10b981; margin-top: 5px;">Save New Rates</button>
+        </form>
+      </div>
+
+      <!-- Active Orders List Section -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h2>Active Customer Orders</h2>
+        <button onclick="loadAdminOrders()" style="padding: 6px 12px; background: #334155; color: #fff; border: none; border-radius: 6px; cursor: pointer;">🔄 Refresh</button>
+      </div>
+
+      <div id="ordersList">
+        <p style="color: #94a3b8;">Loading orders...</p>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
