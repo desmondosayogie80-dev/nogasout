@@ -31,7 +31,7 @@ async function adminLogin() {
 async function loadAdminOrders() {
   const ordersList = document.getElementById('ordersList');
   try {
-    const res = await fetch('/api/orders');
+    const res = await fetch('/admin/orders');
     const data = await res.json();
 
     if (data.success && data.orders.length > 0) {
