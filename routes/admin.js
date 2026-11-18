@@ -33,7 +33,7 @@ function writeData(filePath, data) {
 // Manager PIN Login
 router.post('/login', (req, res) => {
   const { pin } = req.body;
-  if (pin === '1234') {
+  if (pin === '4114') {
     res.json({ success: true });
   } else {
     res.status(401).json({ success: false, message: 'Invalid PIN' });
