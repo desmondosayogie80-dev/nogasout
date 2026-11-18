@@ -19,14 +19,14 @@
     
     <!-- 1. LOGIN CARD (Shown first) -->
     <div id="loginCard" class="card">
-      <h2>Manager Access</h2>
+      <span class="eyebrow">SECURE AREA</span><h2>Manager access</h2>
       <p style="color: #94a3b8; font-size: 14px; margin-bottom: 15px;">Enter your secret PIN to access manager controls.</p>
-      <input type="password" id="adminPin" placeholder="Enter PIN (1234)" style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #fff;">
+      <input type="password" id="adminPin" placeholder="Enter manager PIN" style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #fff;">
       <button onclick="adminLogin()" class="btn-submit">Login</button>
     </div>
 
     <!-- 2. PROTECTED DASHBOARD (Hidden until logged in) -->
-    <div id="dashboardCard" class="card" style="display:none;">
+    <div id="dashboardCard" class="card" style="display:none;"><div class="dashboard-intro"><span class="eyebrow">OPERATIONS CENTER</span><h2>Delivery dashboard</h2><p>Manage incoming orders, dispatches and pricing in one place.</p></div>
       
       <!-- Hidden Price Management Section -->
       <div class="card" style="margin-bottom: 25px; background: rgba(255,255,255,0.03); border: 1px solid #334155; padding: 15px; border-radius: 8px;">

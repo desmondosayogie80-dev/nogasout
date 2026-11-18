@@ -15,17 +15,18 @@
 <body>
   <header class="navbar">
     <img src="assets/logo2.png" alt="Nogasout Logo" class="logo" onerror="this.style.display='none'">
-    <h2>Nogasout</h2>
+    <h2>Nogasout<span class="brand-dot">.</span></h2><nav class="nav-links"><a href="#services">Our services</a><a href="#formCard">Book a delivery</a><a href="#contact">Contact</a></nav><a class="nav-cta" href="#formCard">Get started →</a>
   </header>
 
   <main class="container">
-    <section class="hero-section card">
-      <h1>Fast, Cheap & Reliable Campus Deliveries</h1>
+    <section class="hero-section card"><div class="eyebrow">✦ CAMPUS DELIVERY, MADE SIMPLE</div>
+      <h1>Everything you need, <span class="accent">delivered to your doorstep.</span></h1>
       <p>
         Never run out of cooking gas or stress over heavy lifting! 
         <strong>Nogasout</strong> offers flexible gas refills (pooled or express), heavy load transport, and custom errands right to your hostel room at student-friendly prices.
       </p>
       
+      <a href="#formCard" class="hero-cta">Book a delivery <span>↗</span></a>
       <!-- Service Guide & Coverage -->
   <div class="card" style="margin-bottom: 20px; background: rgba(255,255,255,0.03); border: 1px solid #334155; padding: 20px; border-radius: 10px;">
     <h3 style="margin-bottom: 15px; color: #38bdf8;">Service Guide & Campus Coverage</h3>
@@ -49,7 +50,7 @@
     </div>
   </div>
       
-      <div class="contact-banner">
+      <div class="contact-banner" id="contact">
         <p>Need urgent assistance or custom pricing for heavy loads & errands?</p>
         <div class="contact-buttons">
           <a href="https://wa.me/2349130352456?text=Hello%20Nogasout%20Manager,%20I%20want%20to%20inquire%20about%20a%20service" target="_blank" class="btn-whatsapp">
@@ -62,6 +63,7 @@
       </div>
     </section>
 
+    <div id="services" class="section-heading"><span class="eyebrow">HOW WE MOVE</span><h2>Choose your delivery style</h2><p>From quick errands to heavy loads, we have you covered.</p></div>
     <div class="fleet-showcase">
       <div class="fleet-item">
         <img src="assets/bicycle.webp" alt="Bicycle" onerror="this.style.display='none'">
@@ -77,8 +79,8 @@
       </div>
     </div>
 
-    <div id="formCard" class="card">
-      <h3>Request a Service</h3>
+    <div id="formCard" class="card"><span class="eyebrow">BOOK IN MINUTES</span>
+      <h3>Request a service</h3><p class="form-intro">Fill in your details and we’ll take it from there.</p>
       <form id="orderForm">
         <label>Full Name</label>
         <input type="text" id="name" required placeholder="Enter your full name">
@@ -141,7 +143,7 @@
       <p>Active Pooling Queue: <span id="trackPool">0</span> / 5 Cylinders</p>
       <button onclick="resetForm()" class="btn-secondary">Place Another Order</button>
     </div>
-  </main>
+  </main><footer class="site-footer">© NOGASOUT · Made for easier campus living · <a href="#formCard">Book a delivery</a></footer>
 
   <script src="js/main.js"></script>
 </body>
